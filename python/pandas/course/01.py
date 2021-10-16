@@ -140,7 +140,7 @@ print(df1['종류'])
 Name: 종류, dtype: object
 '''
 
-print(df1['가격'].mean())
+print(df1['가격'].mean()) # series의 출력에 mean함수 사용
 '''
 1750.0
 '''
