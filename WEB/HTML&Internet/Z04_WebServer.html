@@ -1,0 +1,36 @@
+<!-- apache라는 웹서버(http 서버) 프로그램을 이용해 실습을 한다.
+apache는 무료이고 점유율이 굉장히 높은 상태를 오래동안 유지하고 있다
+
+apache는 윈도우에 설치가 좀 까다로운 편이라,
+bitnami.com 에서 제공하는 
+WAMP라는 통합 패키지 프로그램을 많이 사용한다
+Windows
+Apache
+MySQL
+PHP (미들웨어)
+의 통합형 패키지 라고 이해하면 됨
+
+설치 이후 매니저 프로그램이 실행된다 (이 프로그램이 메인이 되는 daemon이라고 보면 됨)
+bitnami wamp manager가 실행 된 후
+go to application을 클릭하면 bitnami에서 제공하는 documents를 볼 수 있다.
+(기본 제공되는 index.html 파일임)
+
+
+설치 후 apache http server를 실행하면
+localhost = 127.0.0.1 을 기본주소로 해서 서비스 되고 있는 것을 알수있다.
+(127.0.0.1 이란 주소는 web browser가 설치되어있는 pc의 웹서버를 가리킨다)
+실제로 pc에선 이 파일은 bitnami설치 폴더의 htdocs라는 폴더 안에 index.html이 있음
+(이 부분은 매니저에서 변경가능 함)
+
+결국 지금의 상황은 웹서버와 웹브라우저가 모두 하나의 pc에서 돌아가고 있는 것
+
+
+
+http://127.0.0.1/index.html
+http://192.168.0.2/index.html (내 아이피가 이거 일 경우로 가정)
+
+이 둘의 차이가 무엇일까?
+127.0.0.1은 그냥 자기 자신의 의미하는 뜻으로 이해 하면 됨
+
+
+-->

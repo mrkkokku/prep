@@ -1,0 +1,72 @@
+<!-- 
+앞에서 만든예제를 가져와서 추가학습을 한다.
+
+이전에 추가한 font태그 대신 css를 이용해 style을 지정해보자
+(기존에 있던 태그를 주석처리하고, 같은기능을 CSS로 구현)
+
+
+@ CSS를 쓰려면 HTML에게 CSS문법으로 작성하겠다는 알림을
+줘야함 -> 본문에 추가하겠다.
+
+ -->
+
+
+<!doctype html>
+
+<html>
+
+<head>
+    <title>WEB1-정리</title>
+    <meta charset="utf-8">
+    <!-- head에 CSS를 쓰겠다는 알림을 줘야함 -->
+    <!-- 이 부분이 CSS 전체를 지배하는 부분 -->
+    <!-- a 태그가 걸린 부분 전부 빨갛게 만드는 것 -->
+    <!-- 이 아름다움을 느껴보라. -->
+    <!-- 이것으로 코딩의 단순화, 중복제거 쌉가능 -->
+    <!-- 대신 디자인과 관련된 부분은 이 style태그 안에 갇혀있게 됨 -->
+    <!-- 어떻게 보면 body에는 내용만, 디자인 내용은 head - meta - style -
+        로 빼내서 문서가 굉장히 깔끔해 지게 되는 것-->
+    <style>
+        a {
+            color:red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><a href="index.html">HTML이란 무엇인가?</a></h1>
+
+    <ul>
+        <li><a href="HTML.html">1. HTML</a></li>
+        <li><a href="CSS.html">2. CSS</a></li>
+        <li><a href="Javascript.html">3. Javascript</a></li>
+    </ul>
+<!--
+    <h1><a href="index.html"><font color="red">HTML이란 무엇인가?</font></a></h1>
+
+    <ul>
+        <li><a href="HTML.html"><font color="red">1. HTML</font></a></li>
+        <li><a href="CSS.html"><font color="red">2. CSS</font></a></li>
+        <li><a href="Javascript.html"><font color="red">3. Javascript</font></a></li>
+    </ul>
+-->
+    <ol>
+        <li>egoing</li>
+        <li>참가자1</li>
+        <li>참가자2</li>
+    </ol>
+
+<h2>HTML</h2>
+
+<a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 specification">The HyperText Markup Language</a>,<br>
+or HTML is the standard markup language<br>
+for documents designed to be displayed in a web browser.<br>
+
+<img src="https://newsimg.sedaily.com/2017/09/18/1OL2QEQOP7_1.jpg" width="10%">
+
+<p style="margin-top:45px;">It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+
+</body>
+
+</html>

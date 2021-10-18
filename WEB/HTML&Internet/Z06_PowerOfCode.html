@@ -1,0 +1,104 @@
+<!-- 기존 만들어논 소스에다가 이런저런 기능을 덧붙여보는 시간을 갖자
+@1 유튜브 링크
+@2 댓글기능 넣기
+@3 채팅기능 넣기 (마치 쇼핑사이트의 상담사와 채팅하도록 실시간 챗 기능과 유사한 것)
+    tawk.to에서 코드 받아오기 가능
+@4 방문자 관련 기능 넣기
+    구글 애널리틱스 서비스를 사용하는 것 analytics.google.com
+    사이트에서 가입하고 이런저런 정보를 기입하면 추후 분석데이터를 뽑아볼때
+    용이한 정보들이 세팅될 것.
+    가입 후 tracking code라는 것을 찾아서 코드를 가져다가
+    내 웹파일에 박아 놓으면 이제 알아서 추적이 될 것이다.
+-->
+
+<!doctype html>
+
+<html>
+
+<head>
+    <title>WEB1-정리</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1><a href="index.html">HTML이란 무엇인가?</a></h1>
+
+    <ul>
+        <li><a href="HTML.html">1. HTML</a></li>
+        <li><a href="CSS.html">2. CSS</a></li>
+        <li><a href="Javascript.html">3. Javascript</a></li>
+    </ul>
+
+    <ol>
+        <li>egoing</li>
+        <li>참가자1</li>
+        <li>참가자2</li>
+    </ol>
+
+<h2>HTML</h2>
+<!-- @1 youtube의 공유기능을 그대로 카피해서 여기에 추가해 봄 -->
+<p>
+    <iframe width="560" height="315"
+    src="https://www.youtube.com/embed/GiDKqhUiGi4"
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+</p>
+
+<a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 specification">The HyperText Markup Language</a>,<br>
+or HTML is the standard markup language<br>
+for documents designed to be displayed in a web browser.<br>
+
+<img src="https://newsimg.sedaily.com/2017/09/18/1OL2QEQOP7_1.jpg" width="10%">
+
+<p style="margin-top:45px;">It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+
+<!-- @2 disqus라는 사이트에서 제공하는 기능 중 댓글 기능을 가져와 추가해 본다 
+아래 p태그 안에 disqus에서 제공하는 코드를 그대로 붙여넣었고,
+이대로 실행하면 돌아가지 않는데, file 프로토콜로 열지않고
+127.0.0.1/~ 로 접속하면 작동한다. (내 pc는 웹서버 안깔아놔서 이런식으로 안돌아감)
+보안상의 이유로 file프로토콜로는 안보이게 막아놓은 듯
+-->
+<p>
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://web1-2.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+</p>
+
+<!-- @3 채팅기능 코드 가져온 것 여기 통쨰로 추가 (p태그 없이) -->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/57a72994c11fe69b0bd8fa90/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+
+</html>

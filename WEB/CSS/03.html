@@ -1,0 +1,71 @@
+<!-- 혁명적 변화
+앞에서 배웠 듯, 웹브라우저에게 CSS와 HTML의 분리를 알려주기 위해
+style태그를 이용했는데 이것 외에도 다른 방법이 있다.
+
+2. CSS라는 텍스트에 마우스오버 때 효과를 넣는 실습을 해보자
+
+-->
+
+
+<!doctype html>
+
+<html>
+
+<head>
+    <title>WEB1-정리</title>
+    <meta charset="utf-8">
+    <style>
+        /* 여기서 a는 선택자(selector)의 의미를 가진다 */
+        a { 
+            color:black;
+            /* semi-colon의 의미는 라인을 각 속성을 분리하는
+            delimiter로 작동함.
+            
+            그리고 text-decoration은 text꾸밈을 의미함 */
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><a href="index.html">HTML이란 무엇인가?</a></h1>
+
+    <ul>
+        <li><a href="HTML.html">1. HTML</a></li>
+        <!-- 여기서 실습한다 -->
+        <!-- 아래와 같이 특정 태그안에 style태그가 들어가게 되면
+        (HTML태그의 속성으로 들어가게 되면) 해당 태그에만 그 의미가 
+        한정적으로 적용되게 됨
+        -->
+        <li><a href="CSS.html" style="color:red; text-decoration:underline;">2. CSS</a></li>
+        <li><a href="Javascript.html">3. Javascript</a></li>
+    </ul>
+<!--
+    <h1><a href="index.html"><font color="red">HTML이란 무엇인가?</font></a></h1>
+
+    <ul>
+        <li><a href="HTML.html"><font color="red">1. HTML</font></a></li>
+        <li><a href="CSS.html"><font color="red">2. CSS</font></a></li>
+        <li><a href="Javascript.html"><font color="red">3. Javascript</font></a></li>
+    </ul>
+-->
+    <ol>
+        <li>egoing</li>
+        <li>참가자1</li>
+        <li>참가자2</li>
+    </ol>
+
+<h2>HTML</h2>
+
+<a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 specification">The HyperText Markup Language</a>,<br>
+or HTML is the standard markup language<br>
+for documents designed to be displayed in a web browser.<br>
+
+<img src="https://newsimg.sedaily.com/2017/09/18/1OL2QEQOP7_1.jpg" width="10%">
+
+<p style="margin-top:45px;">It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+
+</body>
+
+</html>
