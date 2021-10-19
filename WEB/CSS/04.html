@@ -1,0 +1,64 @@
+<!-- CSS 속성을 스스로 알아내는 방법 
+
+아래에서 WEB이란 텍스트를 크게 만들고 싶어진 상황이라고 가정하자.
+(이외에도 가운데 정렬이라던가 다양한 속성이 있을 것)
+
+이러한 상황에서 어떻게 할 것인가?
+
+아래 style 태그 안에 selector를 추가하고 property의 value를 지정한다.
+(property의 숫자는 셀 수 없이 많고, 이건 외우는게 아니고 그때그때 찾아 쓰는 것)
+
+style태그가 HTML을 완전히 지배함을 느껴보자
+-->
+
+<!doctype html>
+
+<html>
+
+<head>
+    <title>WEB1-정리</title>
+    <meta charset="utf-8">
+    <style>
+        a { 
+            color:black;
+
+            text-decoration: none;
+        }
+        /* 아래에 추가 시작, 크기, 가운데정렬 등 */
+        h1 {
+            font-size:45px;
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><a href="index.html">HTML이란 무엇인가?</a></h1>
+
+    <ul>
+        <li><a href="HTML.html">1. HTML</a></li>
+
+        <li><a href="CSS.html" style="color:red; text-decoration:underline;">2. CSS</a></li>
+        <li><a href="Javascript.html">3. Javascript</a></li>
+    </ul>
+
+    <ol>
+        <li>egoing</li>
+        <li>참가자1</li>
+        <li>참가자2</li>
+    </ol>
+
+<h2>HTML</h2>
+
+<a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 specification">The HyperText Markup Language</a>,<br>
+or HTML is the standard markup language<br>
+for documents designed to be displayed in a web browser.<br>
+
+<img src="https://newsimg.sedaily.com/2017/09/18/1OL2QEQOP7_1.jpg" width="10%">
+
+<p style="margin-top:45px;">It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+
+</body>
+
+</html>
