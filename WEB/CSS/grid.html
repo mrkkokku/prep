@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> </title>
+    <style>
+    div {
+        border:5px solid gray;
+        /* 디스플레이 속성에 grid를 활용하는것에 주목하자 */
+        /* 이 grid로 지정한다는 것은, grid 관련 속성을 활용할 수 있는 특별한 의미가 있음 */
+        display:grid;
+        /* grid이기 때문에 아래와 같은 속성을 활용가능하고
+        fr은 해상도 변화에 따라 자연스레 변화하는 기능이 있음
+        심지어 긴 텍스트가 들어가도 자동으로 줄바꿈 되는 등, 
+        웹브라우져 변화에 반응함 */
+        grid-template-columns:150px 1fr;
+    }
+    #grid {
+        border:5px solid pink;
+    }
+    </style>
+</head>
+
+<body> <!-- 아래의 두 단어에 대해 나란히 붙히는 작업을 해 보자 -->
+    <!-- 디자인적 용도로, 다른 의미가 없는, 그럴때 쓰는 태그가 div 태그 -->
+    <!-- 얘는 level element라서 전체를 차지함 -->
+    <div id="grid"> <!-- 디자인적 활용을 위해 id도 지정하고 div를 div로 다시 묶음 -->
+        <div>NAVIGATION</div> 
+        <div>ARTICLE</div>
+    </div>
+</body>
+
+</html>

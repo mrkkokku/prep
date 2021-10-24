@@ -1,0 +1,74 @@
+<!-- 앞서배운 박스모델을 활용해서 지금까지 예제로 만들어온 웹페이지를
+좀 꾸며보는 작업을 해보자
+
+
+-->
+
+<!doctype html>
+
+<html>
+
+<head>
+    <title>WEB1-정리</title>
+    <meta charset="utf-8">
+    <style>
+        #active {
+            color:red;
+        }
+        a { 
+            color:black;
+            text-decoration: none;
+        }
+        .saw {
+               color:gray;
+        }
+        #active {
+            color:red;
+        }
+        h1 {
+            font-size:45px;
+            text-align:center;
+            /* @1 제목을 이쁘게 꾸미기 위해 박스모델을 활용해 아래의 속성을 추가*/
+            border-bottom: 1px solid gray;
+            margin:0px;
+            padding:20px;
+        }
+            /* 박스모양을 만들기 위해 아래의 속성까지 노가다로 맞춰주는 작업을 함 */
+        ul {
+            border-right:1px solid gray;
+            width:100px;
+            margin:0;
+            padding:20px;
+        }
+            /* 위에서 하는 작업 관련으로 body까지 손대야 해서 여기도 추가 함 */
+        body {
+            margin:0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><a href="index.html">HTML이란 무엇인가?</a></h1>
+
+    <ul> 
+        <li><a href="HTML.html" class="saw">1. HTML</a></li>
+        <li><a href="CSS.html" class="saw" id="active">2. CSS</a></li>
+
+
+        <li><a href="Javascript.html">3. Javascript</a></li>
+    </ul>
+
+<h2>HTML</h2>
+
+<a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 specification">The HyperText Markup Language</a>,<br>
+or HTML is the standard markup language<br>
+for documents designed to be displayed in a web browser.<br>
+
+<img src="https://newsimg.sedaily.com/2017/09/18/1OL2QEQOP7_1.jpg" width="10%">
+
+<p style="margin-top:45px;">It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+
+</body>
+
+</html>
