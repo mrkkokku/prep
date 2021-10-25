@@ -1,0 +1,28 @@
+<!-- 800px보다 가로길이가 크고 작고에 따라 아래 text가 
+    보이거나, 안보이거나 하도록 구성해보자 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF8">
+        <title></title>
+        <style>
+            div{
+                border:10px solid green;
+                font-size: 60px;
+            }
+        /* screen width > 800px */
+        /* max-width 로도 사용 가능 */
+        @media(min-width:800px) {
+            div {
+                display: none;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div>
+            Responsive part
+        </div>
+    </body>
+</html>

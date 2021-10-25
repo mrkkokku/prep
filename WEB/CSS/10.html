@@ -1,0 +1,90 @@
+<!-- 이번엔 반응형 웹에 대해 알아본다.
+    웹브라우져의 해상도에 따라 최적화된 모습으로 변하는 것을 말함.
+
+    Responsive Web 이라고 함
+    web페이지의 각 요소들이 반응하는 디자인
+
+    여기에서 핵심요소 media query.
+    새로운 페이지 하나 파서 공부하자
+
+    media query에 대해 이해하고 왔다면
+    아래의 예제를 꾸미는데 활용해보자
+-->
+
+<!doctype html>
+
+<html>
+
+<head>
+    <title>WEB1-정리</title>
+    <meta charset="utf-8">
+    <style>
+        #active {
+            color:red;
+        }
+        a { 
+            color:black;
+            text-decoration: none;
+        }
+        #active {
+            color:red;
+        }
+        h1 {
+            font-size:45px;
+            text-align:center;
+            border-bottom: 1px solid gray;
+            margin:0px;
+            padding:20px;
+        }
+        ul {
+            border-right:1px solid gray;
+            width:100px;
+            margin:0;
+            padding:20px;
+        }
+        body {
+            margin:0;
+        }
+        #grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+        #grid ul {
+            padding-left: 35px;
+        }
+        #article {
+            padding-left: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><a href="index.html">HTML이란 무엇인가?</a></h1>
+
+<div id="grid">
+        <ul> 
+            <li><a href="HTML.html">1. HTML</a></li>
+            <li><a href="CSS.html" id="active">2. CSS</a></li>
+
+
+            <li><a href="Javascript.html">3. Javascript</a></li>
+        </ul>
+
+
+    <div id="article">
+        <h2>HTML</h2>
+            <p>
+                <a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 specification">The HyperText Markup Language</a>,<br>
+                or HTML is the standard markup language<br>
+                for documents designed to be displayed in a web browser.<br>
+
+                <img src="https://newsimg.sedaily.com/2017/09/18/1OL2QEQOP7_1.jpg" width="10%">
+
+                <p style="margin-top:45px;">It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+            </p>
+    </div>
+</div>
+</body>
+
+</html>

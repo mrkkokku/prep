@@ -1,0 +1,82 @@
+<!-- 이제 grid를 활용하는 방법을 알아보자
+-->
+
+<!doctype html>
+
+<html>
+
+<head>
+    <title>WEB1-정리</title>
+    <meta charset="utf-8">
+    <style>
+        #active {
+            color:red;
+        }
+        a { 
+            color:black;
+            text-decoration: none;
+        }
+        #active {
+            color:red;
+        }
+        h1 {
+            font-size:45px;
+            text-align:center;
+            border-bottom: 1px solid gray;
+            margin:0px;
+            padding:20px;
+        }
+        ul {
+            border-right:1px solid gray;
+            width:100px;
+            margin:0;
+            padding:20px;
+        }
+        body {
+            margin:0;
+        }
+        /* id grid에 대해 꾸밀수 있게 css속성을 활용한다 */
+        #grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+        }
+        /* 추가적 꾸밈을 위해 아래의 속성을 활용 */
+        /* 조상이 grid id를 가지는 모든 ul태그를 뜻함 */
+        #grid ul {
+            padding-left: 35px;
+        }
+        #article {
+            padding-left: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1><a href="index.html">HTML이란 무엇인가?</a></h1>
+<!-- 2. 여기도 마찬가지 div 활용 -->
+<div id="grid">
+        <ul> 
+            <li><a href="HTML.html">1. HTML</a></li>
+            <li><a href="CSS.html" id="active">2. CSS</a></li>
+
+
+            <li><a href="Javascript.html">3. Javascript</a></li>
+        </ul>
+
+        <!-- 1. 아래를 이쁘게 꾸미기 위해 의미가 없는 div 태그를 활용한다 -->
+    <div id="article">
+        <h2>HTML</h2>
+
+        <a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 specification">The HyperText Markup Language</a>,<br>
+        or HTML is the standard markup language<br>
+        for documents designed to be displayed in a web browser.<br>
+
+        <img src="https://newsimg.sedaily.com/2017/09/18/1OL2QEQOP7_1.jpg" width="10%">
+
+        <p style="margin-top:45px;">It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+    </div>
+</div>
+</body>
+
+</html>
