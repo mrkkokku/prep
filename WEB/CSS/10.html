@@ -9,6 +9,9 @@
 
     media query에 대해 이해하고 왔다면
     아래의 예제를 꾸미는데 활용해보자
+
+    가로픽셀이 줄어들 때에 반응하는 디자인을 구현해 본다.
+    700픽셀 기준으로 해보자
 -->
 
 <!doctype html>
@@ -54,6 +57,19 @@
         }
         #article {
             padding-left: 25px;
+        }
+
+        /* screen width < 800px */
+        @media(max-width:700px) {
+            #grid {
+                display: block; /* 특정사이즈 아래로가면 block이 되어 아래로 가버림 */
+            }
+            ul { /* 특정사이즈 아래로가면 테두리도 없애버림*/
+                border-right:none;
+            }
+            h1 {
+                border-bottom:none;
+            }
         }
     </style>
 </head>

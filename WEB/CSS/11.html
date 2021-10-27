@@ -1,0 +1,70 @@
+<!-- 오늘은 css 관련 코드의 재사용에 관해 알아보자
+    (다른 페이지에서도 가져다 쓰는 의미의 reuse)
+
+    이번 강의는 단순히 style태그만 copy & paste해서
+    index, html, css 등에 뿌리는거라 
+    따로 실습은 진행하지 않겠다.
+
+    이러한 일은 굉장히 귀찮은 일이며, 굉장히 비효율 적이다.
+    심지어 모든 페이지에 copy & paste 해뒀다가
+    수정사항이 생긴다면? .. 답이없다.
+
+    이러한 상황에서 어떻게 해야할까?
+    -> 중복을 제거해야하며 그 방법은
+    style.css 파일을 만들어 별도로 빼서 관리하자.
+
+    실제론 HTML, index등 모든 html 파일에
+    같이 적용해야하지만, 실습을 위해 그것들은 남겨둔다.
+
+    어찌됐든 이렇게 함으로써 css파일 하나로 
+    모든 html 내 style을 관리할 수 있다.
+
+    내부적으로 (크롬 개발자 도구의 Network탭 기능을 통해 확인이가능한)
+    웹서버로부터 클라이언트에서 html을 먼저 받고,
+    디코드 하면서 link태그를 보고 css를 다운받는 모습을 볼 수 있음.
+
+    게다가 클라이언트에서 css파일을 캐시해둔다면,
+    웹서버 트래픽이 훨 줄어들기 때문에, 망사용료도 덜 내는 효과가 생길 것.
+-->
+
+<!doctype html>
+
+<html>
+
+<head>
+    <title>WEB1-정리</title>
+    <meta charset="utf-8">
+    <!-- link 태그를 통해 style태그를 import하는 개념임 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1><a href="index.html">HTML이란 무엇인가?</a></h1>
+
+<div id="grid">
+        <ul> 
+            <li><a href="HTML.html">1. HTML</a></li>
+            <li><a href="CSS.html" id="active">2. CSS</a></li>
+
+
+            <li><a href="Javascript.html">3. Javascript</a></li>
+        </ul>
+
+
+    <div id="article">
+        <h2>HTML</h2>
+            <p>
+                <a href="https://www.w3.org/TR/html5/" target="_blank" title="html5 specification">The HyperText Markup Language</a>,<br>
+                or HTML is the standard markup language<br>
+                for documents designed to be displayed in a web browser.<br>
+
+                <img src="https://newsimg.sedaily.com/2017/09/18/1OL2QEQOP7_1.jpg" width="10%">
+
+                <p style="margin-top:45px;">It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.</p>
+            </p>
+    </div>
+</div>
+</body>
+
+</html>
