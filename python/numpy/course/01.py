@@ -3,6 +3,7 @@
 
 # 넘파이를 사용하면 다차원배열을 효율적으로 사용할 수 있다.
 
+# (넘파이의 철학은 반복문 배제)
 import numpy as np
 import timer
 import time
