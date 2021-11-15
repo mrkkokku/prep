@@ -89,7 +89,7 @@ print( a[0:1, :] )
 [[1 2 3 4]]
 '''
 
-# 인덱싱와 슬라이스 혼합 사용
+# 슬라이싱만 사용
 slicedRow = a[0:1, :]
 print( slicedRow, slicedRow.shape, slicedRow.ndim )
 '''
