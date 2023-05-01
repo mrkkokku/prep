@@ -1,6 +1,7 @@
 package coding_test;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 
@@ -97,10 +98,55 @@ public class Level01 {
             return false;
         }
 	}
+	
+	public static int[] numToArray(long n) {
+		/*
+		자연수 n을 뒤집어 각 자리 숫자를 원소로 가지는 배열 형태로 리턴해주세요.
+		예를들어 n이 12345이면 [5,4,3,2,1]을 리턴합니다.
+		 */
+		String str_n = String.valueOf(n);
+        
+        String[] strList = str_n.split("");
+        int[] result = new int[strList.length];
+        
+        for(int i = 0; i < strList.length; i++){
+            result[result.length - 1 - i] = Integer.parseInt(strList[i]);
+        }
+        
+        
+        for (long a : result) {
+        	System.out.print(a + " ");
+        }
+        return result;
+	}
+	
+	public static long intOrdering(long n) {
+		/*
+		함수 solution은 정수 n을 매개변수로 입력받습니다.
+		n의 각 자릿수를 큰것부터 작은 순으로 정렬한 새로운 정수를 리턴해주세요.
+		예를들어 n이 118372면 873211을 리턴하면 됩니다.
+		 */
+		long answer = 0;
+        String str_result = "";
+        
+        String temp = String.valueOf(n);
+        
+        String[] temp_list = temp.split("");
+        
+        Arrays.sort(temp_list, Collections.reverseOrder());
+        
+        for(int i = 0; i < temp_list.length; i++) {
+            str_result += temp_list[i];
+        }
+        
+        answer = Long.parseLong(str_result);
+        
+        return answer;
+	}
 
 	public static void main(String[] args) {
 		System.out.println("=====시작=====\n");
-		Level01.hasadNum(13);
+		Level01.numToArray(532521);
 		System.out.println("\n======끝======");
 	}
 
