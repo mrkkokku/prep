@@ -14,11 +14,11 @@ def solution(arr):
     
     return answer
 
-print(solution([1]))
 def solution(arr):
     answer = []
-    if len(arr)==1:
-        return [-1]
+    if len(arr) == 1:
+        answer.append(-1)
     else:
-        arr.remove(min(arr))
-    return arr
+        answer = arr
+        answer.remove(min(arr))
+    return answer
