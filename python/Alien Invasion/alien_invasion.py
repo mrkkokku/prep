@@ -4,6 +4,7 @@ import pygame
 from settings import Settings
 from ship import Ship
 from bullet import Bullet
+from alien import Alien
 
 class AlienInvasion:
 
@@ -25,13 +26,16 @@ class AlienInvasion:
 
         self.ship = Ship(self)
         self.bullets = pygame.sprite.Group()
+        self.aliens = pygame.sprite.Group()
+
+        self._create_fleet()
     
     def run_game(self):
-
+        # 단순하게 구성된 main loop의 구조에 주목
         while(True):
             self._check_events()
             self.ship.update()
-            self.bullets.update()
+            self._update_bullets() 
             self._update_screen()
             self.clock.tick(60)
 
@@ -61,16 +65,40 @@ class AlienInvasion:
             self.ship.moving_left = False
 
     def _fire_bullet(self):
-        new_bullet = Bullet(self)
-        self.bullets.add(new_bullet)
+        if len(self.bullets) < self.settings.bullets_allowed:
+            new_bullet = Bullet(self)
+            self.bullets.add(new_bullet)
+
+    def _update_bullets(self):
+        self.bullets.update()
+        # 화면 밖 bullet 제거
+        for bullet in self.bullets.copy():
+            if bullet.rect.bottom <= 0:
+                self.bullets.remove(bullet)
+        print(len(self.bullets))
+
 
     def _update_screen(self):
          self.screen.fill(self.settings.bg_color)
          for bullet in self.bullets.sprites():
              bullet.draw_bullet()  
          self.ship.blitme()
+         self.aliens.draw(self.screen)
 
          pygame.display.flip()
+    
+    def _create_fleet(self):
+        alien = Alien(self)
+        # self.aliens.add(alien)
+        alien_width = alien.rect.width
+
+        current_x = alien_width
+        while current_x < (self.settings.screen_width - 2 * alien_width):
+            new_alien = Alien(self)
+            new_alien.x = current_x
+            new_alien.rect.x = current_x
+            self.aliens.add(new_alien)
+            current_x += 2 * alien_width
 
 if __name__ == '__main__':
     ai = AlienInvasion()
